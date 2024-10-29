@@ -1,0 +1,125 @@
+    * {
+        margin: 0;
+        padding: 0%;
+    }
+    
+    .after-noon {
+        height: 100vh;
+        background: rgb(0, 21, 49);
+        margin: auto;
+        font-size: 13px;
+        position: relative;
+        background: url(2048x1152_px_lake_landscape_nature-567759.png);
+        overflow: hidden;
+        animation: sky 10s linear forwards 9s;
+    }
+    
+    @keyframes sky {
+        20% {
+            background: rgb(1, 31, 70);
+        }
+        40% {
+            background: rgb(3, 52, 116);
+        }
+        60% {
+            background: rgb(11, 81, 172);
+        }
+        80% {
+            background: rgb(34, 111, 212);
+        }
+        100% {
+            background: rgb(75, 153, 255);
+        }
+    }
+    
+    .after-noon::after {
+        position: absolute;
+        content: '';
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        top: 0;
+        left: 50%;
+        background: #fcfcfc;
+        z-index: 1;
+        animation: moon 13s linear forwards;
+    }
+    
+    @keyframes moon {
+        100% {
+            left: 0%;
+            top: 100%;
+        }
+    }
+    
+    .after-noon::before {
+        position: absolute;
+        z-index: 1;
+        content: '';
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        top: 100%;
+        left: 70%;
+        background: rgb(255, 244, 206);
+        box-shadow: 0 0 40px wheat;
+        transform: translate(35%, -100%);
+        animation: sun linear forwards 20s;
+    }
+    
+    @keyframes sun {
+        0% {
+            background: rgb(253, 150, 65);
+            box-shadow: none;
+        }
+        20% {
+            background: rgb(255, 174, 68);
+        }
+        30% {
+            background: rgb(255, 183, 89);
+            box-shadow: 0 0 10px rgb(255, 160, 184);
+        }
+        50% {
+            background: rgb(248, 190, 30);
+            box-shadow: 0 0 40px wheat;
+        }
+        60% {
+            background: rgb(255, 192, 57);
+            box-shadow: 0 0 40px wheat;
+        }
+        80% {
+            background: rgb(248, 197, 57);
+            box-shadow: 0 0 50px rgb(255, 205, 42), 0 0 60px rgb(253, 224, 57);
+        }
+        100% {
+            left: 35%;
+            top: -30%;
+        }
+    }
+    
+    .cover {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-position: right;
+        background-size: cover;
+        animation: dark 12s linear forwards;
+    }
+    
+    @keyframes dark {
+        20% {
+            opacity: 1;
+        }
+        40% {
+            opacity: 9;
+        }
+        60% {
+            opacity: 7;
+        }
+        80% {
+            opacity: 5;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
